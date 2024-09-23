@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Pulls the code from the GitHub repository
-                git 'https://github.com/YourGitHubUsername/website-project.git'
+                git 'https://github.com/HimanshuG98/Localrepo.git'
             }
         }                                    
         stage('Build') {
