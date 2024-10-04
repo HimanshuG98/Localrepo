@@ -4,39 +4,24 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout code from GitHub
-                git url: 'https://github.com/yourusername/your-repo.git'
+                // Pull code from the GitHub repository
+                git url: 'https://github.com/your-username/your-repo.git', branch: 'main'
             }
         }
-
         stage('Build') {
             steps {
-                // Build step (if applicable)
-                echo 'Building the application...'
+                sh 'echo "Building the project..."'
             }
         }
-
         stage('Test') {
             steps {
-                // Testing step (if applicable)
-                echo 'Running tests...'
+                sh 'echo "Running tests..."'
             }
         }
-
         stage('Deploy') {
             steps {
-                // Deployment step (if applicable)
-                echo 'Deploying application...'
+                sh 'echo "Deploying the application..."'
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'Pipeline completed successfully!'
-        }
-        failure {
-            echo 'Pipeline failed. Please check the logs.'
         }
     }
 }
